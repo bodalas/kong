@@ -1,12 +1,15 @@
 _format_version: "1.1"
 
-hosts:
 
-  services:
-    - name: my-service
-      url: http://localhost:3000
-      routes:
-      - name: my-route
-        paths:
-        - /
+services:
+- name: core-api
+  url: http://localhost:3000
+  routes:
+  - name: hello-world
+    paths:
+    - /hello
+    strip_path: false
+    hosts:
+    - staging.api.trybrevity.com
+    - api.trybrevity.com 
         
